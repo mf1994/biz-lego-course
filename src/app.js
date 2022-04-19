@@ -8,6 +8,6 @@ app.use(jwt)
 
 app.use(index.routes(), index.allowedMethods())
 
-console.log("i am running!!！")
+console.log("i am running!!!")
 
 module.exports = app
