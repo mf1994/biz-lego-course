@@ -36,7 +36,7 @@ jobs:
                     # 记得删除 origin ，否则会暴露 github 密码
                     # cd /project/imooc-lego/biz-lego-course;
                     cd /project/imooc-lego/biz-lego-course;
-                    git init
+                    # git init
                     git remote add origin git@github.com:mf1994/biz-lego-course.git;
                     # git remote add origin https://mf1994:${{secrets.MF_PASSWORD}}@github.com:mf1994/biz-lego-course.git
                     git checkout demo;
