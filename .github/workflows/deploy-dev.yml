@@ -34,8 +34,8 @@ jobs:
                     # 【注意】用 work 账号登录，手动创建 /home/work/imooc-lego 目录
                     # 然后 git clone https://mf1994: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@github.com/mf1994/biz-lego-course.git -b demo （私有仓库，使用 github 用户名和密码）
                     # 记得删除 origin ，否则会暴露 github 密码
-                    # cd /home/work/imooc-lego/biz-lego-course;
-                    cd /home/work/imooc-lego;
+                    # cd /project/imooc-lego/biz-lego-course;
+                    cd /project/imooc-lego;
                     # git remote add origin git@github.com:mf1994/biz-lego-course.git;
                     git remote add origin https://mf1994:${{secrets.MF_PASSWORD}}@github.com:mf1994/biz-lego-course.git
                     git checkout demo;
