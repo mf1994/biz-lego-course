@@ -42,10 +42,10 @@ jobs:
                     git fetch
                     git checkout demo;
                     git pull origin demo; # 重新下载最新代码
-                    npm install
+                    # npm install
                     git remote remove origin; # 删除 origin ，否则会暴露 github 密码
                     # 启动 docker
-                    # docker-compose build editor-server; # 和 docker-compose.yml service 名字一致
+                    docker-compose build editor-server; # 和 docker-compose.yml service 名字一致
                     # docker-compose up -d;
                   "
             - name: delete ssh key # 删除 ssh key
