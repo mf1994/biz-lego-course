@@ -7,7 +7,7 @@ services:
         image: editor-server # 依赖于当前 Dockerfile 创建出来的镜像
         container_name: editor-server
         ports:
-            - 3000:3000 # 宿主机通过 8081 访问
+            - 3000 # 宿主机通过 8081 访问
     editor-redis: # service name，重要！
         image: redis # 引用官网 redis 镜像
         container_name: editor-redis
