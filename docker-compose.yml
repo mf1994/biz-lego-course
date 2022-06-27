@@ -18,7 +18,7 @@ services:
         environment:
             - TZ=Asia/Shanghai # 设置时区
     editor-mysql:
-        image: mysql # 引用官网 mysql 镜像
+        image: mysql:5.7.31 # 引用官网 mysql 镜像
         container_name: editor-mysql
         restart: always # 出错则重启
         privileged: true # 高权限，执行下面的 mysql/init
