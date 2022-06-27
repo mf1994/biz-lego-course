@@ -37,6 +37,7 @@ jobs:
                     # cd /project/imooc-lego/biz-lego-course;
                     #cd project/imooc-lego/biz-lego-course;
                     cd ../usr/local/git/bin
+                    which git
                     ls -l
                     pwd
                     git --version
