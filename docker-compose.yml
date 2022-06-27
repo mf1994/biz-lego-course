@@ -22,7 +22,7 @@ services:
         container_name: editor-mysql
         restart: always # 出错则重启
         privileged: true # 高权限，执行下面的 mysql/init
-        command: --default-authentication-plugin=caching_sha2_password # 远程访问
+        command: --default-authentication-plugin=mysql_native_password # 远程访问
         ports:
             - 3305:3306 # 宿主机可以用 127.0.0.1:3305 即可连接容器中的数据库，和 redis 一样
         volumes:
