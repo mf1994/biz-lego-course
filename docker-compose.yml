@@ -9,8 +9,8 @@ services:
         ports:
             - 8080:3001 # 宿主机通过 8081 访问
         volumes:
-          - .:/srv/app
-          - /srv/app/node_modules
+          - .:/root/project/imooc-lego/biz-lego-course
+          - /root/project/imooc-lego/biz-lego-course/node_modules
     editor-redis: # service name，重要！
         image: redis # 引用官网 redis 镜像
         container_name: editor-redis
