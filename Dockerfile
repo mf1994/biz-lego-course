@@ -11,5 +11,5 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shangh
 RUN npm i
 
 # 启动
-CMD npm run prd-dev && npx pm2 log
+#CMD npm run prd-dev && npx pm2 log
 # CMD npm run prd && npx pm2 log
