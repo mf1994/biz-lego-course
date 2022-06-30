@@ -9,6 +9,7 @@ var port = normalizePort(process.env.PORT || '3001')
 
 var server = http.createServer(app.callback())
 
+console.log("mfmfmfmfmmfmfmmfmmfmfm")
 // 先同步mysql数据表
 // syncDb().then(() => {
     // 再启动服务
