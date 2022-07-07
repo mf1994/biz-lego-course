@@ -37,7 +37,7 @@ jobs:
                     # cd /project/imooc-lego/biz-lego-course;
                     cd project/imooc-lego/biz-lego-course;
                     git --version
-                    #git init
+                    git init
                     git remote add origin git@github.com:mf1994/biz-lego-course.git;
                     # git remote add origin https://mf1994:${{secrets.MF_PASSWORD}}@github.com:mf1994/biz-lego-course.git
                     git fetch
