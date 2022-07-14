@@ -9,7 +9,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shangh
 # RUN npm set registry https://registry.npm.taobao.org
 # RUN npm cache clean --force
 #RUN npm i
-#RUN npm install pm2 -g
+RUN npm install pm2 -g
 RUN npm install cross-env -g
 
 # 启动
