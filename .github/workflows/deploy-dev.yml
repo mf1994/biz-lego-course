@@ -40,6 +40,7 @@ jobs:
                     #git init
                     git remote add origin git@github.com:mf1994/biz-lego-course.git;
                     # git remote add origin https://mf1994:${{secrets.MF_PASSWORD}}@github.com:mf1994/biz-lego-course.git
+                    git checkout .
                     git fetch
                     git checkout demo;
                     git pull origin demo; # 重新下载最新代码
