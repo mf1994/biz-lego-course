@@ -24,7 +24,7 @@ module.exports = async function loginCheck(ctx, next) {
         const userInfo = await jwtVerify(token)
         delete userInfo.password // 屏蔽密码
         // 验证成功，获取userInfo
-        ctx.body = userInfo
+        ctx.userInfo = userInfo
     } catch (ex) {
         flag = false
         ctx.body = errRes

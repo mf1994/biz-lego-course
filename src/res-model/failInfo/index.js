@@ -3,7 +3,9 @@
  */
 
 const usersInfos = require('./user')
+const worksInfos = require('./works')
 
 module.exports = {
-    ...usersInfos
+    ...usersInfos,
+    ...worksInfos
 }

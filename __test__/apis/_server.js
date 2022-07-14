@@ -10,7 +10,7 @@ const { isTestRemote, isTestLocal } = require('../../src/utils/env')
 let request
 if (isTestLocal) {
     // 本地测试才使用 supertest 。src/app 也要在此时引用，否则在 github actions 中初始化时，会报数据库连接错误。
-     const server = require('../../src/app').callback() // eslint-disable-line
+    const server = require('../../src/app').callback() // eslint-disable-line
     request = supertest(server)
 }
 
@@ -18,7 +18,7 @@ if (isTestLocal) {
 let TOKEN = ''
 
 // 测试机 host
-const REMOTE_HOST = 'http://182.92.168.192:8081'
+const REMOTE_HOST = 'http://47.111.130.103:8080/'
 
 /**
  * 发送请求

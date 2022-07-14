@@ -20,7 +20,7 @@ const User = seq.define('user', {
     phoneNumber: {
         type: STRING,
         allowNull: false,
-        unique: 'username',
+        unique: 'phoneNumber',
         comment: '手机号，唯一',
     },
     nickName: {

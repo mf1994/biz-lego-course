@@ -21,7 +21,7 @@ async function jwtVerify(token) {
  * @description sign
  * @param {object} data
  */
-async function jwtSign(data) {
+function jwtSign(data) {
     const token = jwt.sign(data, JWT_SECRET, {expiresIn: jwtExpiresIn})
     return token
 }
