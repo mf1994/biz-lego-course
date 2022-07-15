@@ -13,5 +13,5 @@ RUN npm install pm2 -g
 RUN npm install cross-env -g
 
 # 启动
-CMD npm run prd-dev && npx pm2 log
-#CMD npm run prd && npx pm2 log
+#CMD npm run prd-dev && npx pm2 log
+CMD npm run dev && npx pm2 log
