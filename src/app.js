@@ -7,6 +7,7 @@ const index = require('./routes/index')
 const users = require('./routes/users')
 const works = require('./routes/works')
 const templates = require('./routes/templates')
+const utils = require("./routes/utils")
 
 app.use(jwt)
 
@@ -18,8 +19,9 @@ app.use(
 
 app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
-app.use(works.routes(), users.allowedMethods())
-app.use(works.routes(), templates.allowedMethods())
+app.use(works.routes(), works.allowedMethods())
+app.use(templates.routes(), templates.allowedMethods())
+app.use(utils.routes(), utils.allowedMethods())
 
 console.log("i am running!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 

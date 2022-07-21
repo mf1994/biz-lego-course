@@ -14,6 +14,7 @@ const {createWorks, copyWorks} = require('../controller/works/createWorks')
 const {findOneWork, findMyWorks} = require("../controller/works/findWorks")
 const {updateWorks, transferWorks} = require("../controller/works/updateWorks")
 const {deleteWork, pubBackWork} = require("../controller/works/deleteWorks")
+const {publishWork} = require("../controller/works/publishWorks")
 
 
 // 路由前缀
@@ -82,6 +83,22 @@ router.get('/', loginCheck, async ctx => {
     const {username} = ctx.userInfo
     const {title, status, isTemplate = '0', pageIndex, pageSize} = ctx.query
     const res = await findMyWorks(username, {title, status, isTemplate}, {pageIndex, pageSize})
+    ctx.body = res
+})
+
+// 发布作品
+router.post('/publish/:id', loginCheck, async ctx => {
+    const {id} = ctx.params
+    const {username} = ctx.userInfo
+    const res = await publishWork(id, username)
+    ctx.body = res
+})
+
+// 发布为模板
+router.post('/publish-template/:id', loginCheck, async ctx => {
+    const {id} = ctx.params
+    const {username} = ctx.userInfo
+    const res = await publishWork(id, username, true)
     ctx.body = res
 })
 

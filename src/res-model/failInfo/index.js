@@ -4,8 +4,10 @@
 
 const usersInfos = require('./user')
 const worksInfos = require('./works')
+const utilsInfos = require("./utils")
 
 module.exports = {
     ...usersInfos,
-    ...worksInfos
+    ...worksInfos,
+    ...utilsInfos
 }

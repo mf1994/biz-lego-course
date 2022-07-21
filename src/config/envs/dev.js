@@ -26,5 +26,13 @@ module.exports = {
     jwtExpiresIn: '1d', // 1. 字符串，如 '1h' '2d'； 2. 数字，单位是 s
 
     // 短信验证码缓存时间
-    msgVeriCodeTimeout: 2 * 60
+    msgVeriCodeTimeout: 2 * 60,
+
+    // 阿里云OSS配置
+    aliyunOSSConf: {
+        accessKeyId: 'LTAI5tLWWhuCDRLZuiqivbP8',
+        accessKeySecret: 'Km4P7ox5xD6sswkQYKLvswoXoNeaZV',
+        bucket: 'imooc-lego-123',
+        region: 'oss-cn-hangzhou'
+    }
 }

@@ -21,5 +21,8 @@ Object.assign(devConf.mysqlConf, {
     host: 'editor-mysql', // 和 docker-compose 中配置的 service 名字一致
 })
 
+// 发布出来的 h5 域名
+devConf.h5Origin = 'http://182.92.168.192:8082'
+
 
 module.exports = devConf

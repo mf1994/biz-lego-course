@@ -2,7 +2,7 @@
  * @description 作品 数据操作
  */
 
-const {WorkContentModel} = require("../models/WorkContentModel")
+const {WorkContentModel, WorkPublishContentModel} = require("../models/WorkContentModel")
 const WorksModel = require('../models/WorksModel')
 const UserModel = require('../models/UserModel')
 const _ = require('lodash')
@@ -174,10 +174,37 @@ async function findWorkListService(whereOpt = {}, pageOpt = {}) {
     }
 }
 
+/**
+ * @description 更新发布内容
+ * @param {object} content
+ * @param {string|null} publishContentId
+ */
+async function updatePublishContentService(content, publishContentId) {
+    if (!content) return null
+    const {components = [], props = {}, setting = {}} = content
+    // 已发布
+    if (publishContentId) {
+        await WorkPublishContentModel.findByIdAndUpdate(publishContentId, {
+            components,
+            props,
+            setting
+        })
+        return publishContentId
+    }
+    // 还没有发布
+    const newPublishContent = await WorkPublishContentModel.create({
+        components,
+        props,
+        setting
+    })
+    return newPublishContent._id.toString()
+}
+
 
 module.exports = {
     createWorksService,
     findOneWorkService,
     updateWorkService,
-    findWorkListService
+    findWorkListService,
+    updatePublishContentService
 }
