@@ -2,6 +2,7 @@ const Koa = require('koa')
 const app = new Koa()
 const jwt = require('./middlewares/jwt')
 const bodyparser = require('koa-bodyparser')
+const cors = require('koa2-cors')
 
 const index = require('./routes/index')
 const users = require('./routes/users')
@@ -10,6 +11,7 @@ const templates = require('./routes/templates')
 const utils = require("./routes/utils")
 
 app.use(jwt)
+app.use(cors)
 
 app.use(
     bodyparser({
