@@ -6,7 +6,7 @@
  * @description 基础模型， 包括errno msg
  */
 class BaseRes {
-    constructor(errno, data, message) {
+    constructor({errno, data, message}) {
         this.errno = errno
         if (data) {
             this.data = data
