@@ -44,6 +44,12 @@ jobs:
                     git fetch
                     git checkout demo;
                     git pull origin demo; # 重新下载最新代码
+
+                    docker container stop editor-mysql editor-mongo editor-redis editor-server
+                    docker container rm editor-mysql editor-mongo editor-redis editor-server
+                    docker image rmi editor-server
+                    echo 3 > /proc/sys/vm/drop_caches
+                    
                     # npm install
                     git remote remove origin; # 删除 origin ，否则会暴露 github 密码
                     # 启动 docker
